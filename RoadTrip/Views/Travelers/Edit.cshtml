@@ -1,0 +1,84 @@
+﻿@model RoadTrip.Models.Traveler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Traveler</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="From" class="control-label"></label>
+                <input asp-for="From" class="form-control" />
+                <span asp-validation-for="From" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="To" class="control-label"></label>
+                <input asp-for="To" class="form-control" />
+                <span asp-validation-for="To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Distance" class="control-label"></label>
+                <input asp-for="Distance" class="form-control" />
+                <span asp-validation-for="Distance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stops" class="control-label"></label>
+                <input asp-for="Stops" class="form-control" />
+                <span asp-validation-for="Stops" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GasCost" class="control-label"></label>
+                <input asp-for="GasCost" class="form-control" />
+                <span asp-validation-for="GasCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SnackCost" class="control-label"></label>
+                <input asp-for="SnackCost" class="form-control" />
+                <span asp-validation-for="SnackCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Emergency" class="control-label"></label>
+                <input asp-for="Emergency" class="form-control" />
+                <span asp-validation-for="Emergency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TripCost" class="control-label"></label>
+                <input asp-for="TripCost" class="form-control" />
+                <span asp-validation-for="TripCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonthBudget" class="control-label"></label>
+                <input asp-for="MonthBudget" class="form-control" />
+                <span asp-validation-for="MonthBudget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BudgetMonth" class="control-label"></label>
+                <input asp-for="BudgetMonth" class="form-control" />
+                <span asp-validation-for="BudgetMonth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
