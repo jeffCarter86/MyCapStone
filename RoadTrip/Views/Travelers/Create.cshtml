@@ -27,12 +27,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Distance" class="control-label"></label>
-                <input asp-for="Distance" class="form-control" />
+                <input asp-for="Distance" class="form-control" onchange="stops();" />
                 <span asp-validation-for="Distance" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Stops" class="control-label"></label>
-                <input asp-for="Stops" class="form-control" onchange="stops();" />
+                <input asp-for="Stops" class="form-control" />
                 <span asp-validation-for="Stops" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -57,8 +57,11 @@
             </div>
             <div class="form-group">
                 <label>How Much to Budget Monthly for this Trip</label>
-                <input asp-for="MonthBudget" class="form-control" onchange="save();" />
+                <input asp-for="MonthBudget" class="form-control"/>
                 <span asp-validation-for="MonthBudget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button onclick="save();">Click Here for Months</button>
             </div>
             <div class="form-group">
                 <label asp-for="BudgetMonth" class="control-label"></label>
@@ -69,51 +72,46 @@
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
             <script type="text/javascript">
-    function stops() {
+                function stops() {
 
-                    let distance = (document.getElementById("Distance").value)
+                    let distance = (document.getElementById("Distance").value);
 
                     var stp = (distance) / 250;
                     let output1 = Math.abs(Math.round(stp));
 
                     document.getElementById("Stops").value = output1;
 
-                    let stops = (document.getElementById("Stops").value)
-                    var cost1 = (stops) * (15 * 2.11)
-                    let output2 = Math.abs(Math.round(cost1));
-
+                    var gas = (stp) * (15 * 2.11);
+                    let output2 = Math.abs(Math.round(gas));
                     document.getElementById("GasCost").value = output2;
 
-                    var cost2 = (stops) * 20
-                    let output3 = Math.abs(Math.round(cost2));
-
+                    var snack = (stp) * 20;
+                    let output3 = Math.abs(Math.round(gas));
                     document.getElementById("SnackCost").value = output3;
 
                 }
-
-
-
-
-
                 function budget() {
+                    let c1 = (document.getElementById("GasCost").value);
+                    let c2 = (document.getElementById("SnackCost").value);
+                    let c3 = (document.getElementById("Emergency").value);
 
-                    let snack = (document.getElementById("SnackCost").value)
-                    let gas = (document.getElementById("GasCost").value)
-                    let emergency = (document.getElementById("Emergency").value)
-                    var cost = (snack) + (gas) + (emergency)
-                    let output = Math.abs(Math.round(cost));
+                    var tc = parseInt(c1) + parseInt(c2) + parseInt(c3);
 
-                    document.getElementById("TripCost").value = output;
+                    let final = Math.abs(Math.round(tc));
+                    document.getElementById("TripCost").value = final;
+                }
 
-                    function save() {
+                function save() {
+                    let c1 = (document.getElementById("TripCost").value);
+                    let sv = (document.getElementById("MonthBudget").value);
 
-                        let trip = (document.getElementById("TripCost").value)
-                        let save = (document.getElementById("MonthBudget").value)
 
-                        var cost = (trip) / (save)
-                        let output = Math.abs(Math.round(cost));
+                    var end = parseInt(c1) / parseInt(sv);
 
-                        document.getElementById("BudgetMonth").value = output;</script>
+                    let final = Math.abs(Math.round(end));
+                    document.getElementById("BudgetMonth").value = final;
+                }
+            </script>
         </form>
     </div>
 </div>
