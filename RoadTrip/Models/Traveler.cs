@@ -39,10 +39,10 @@ namespace RoadTrip.Models
         [Display(Name = "Estimated Total Cost of Road Trip")]
         public double TripCost { get; set; }
 
-        [Display(Name = "How much to Budget to pay for Road Trip")]
+        [Display(Name = "Monthly Budget")]
         public double MonthBudget { get; set; }
 
-        [Display(Name = "How many months to pay for Road Trip")]
+        [Display(Name = "Payoff Time in Months")]
         public double BudgetMonth { get; set; }
 
 
