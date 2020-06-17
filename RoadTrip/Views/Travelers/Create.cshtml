@@ -1,8 +1,6 @@
 ﻿@model RoadTrip.Models.Traveler
 
-@{
-    ViewData["Title"] = "Create";
-}
+@{ ViewData["Title"] = "Create"; }
 
 <h1>Create</h1>
 
@@ -34,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Stops" class="control-label"></label>
-                <input asp-for="Stops" class="form-control" />
+                <input asp-for="Stops" class="form-control" onchange="stops();" />
                 <span asp-validation-for="Stops" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -49,7 +47,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Emergency" class="control-label"></label>
-                <input asp-for="Emergency" class="form-control" />
+                <input asp-for="Emergency" class="form-control" onchange="budget();" />
                 <span asp-validation-for="Emergency" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -58,8 +56,8 @@
                 <span asp-validation-for="TripCost" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label >How Much to Budget Monthly for this Trip</label>
-                <input asp-for="MonthBudget" class="form-control" />
+                <label>How Much to Budget Monthly for this Trip</label>
+                <input asp-for="MonthBudget" class="form-control" onchange="save();" />
                 <span asp-validation-for="MonthBudget" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -70,6 +68,52 @@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            <script type="text/javascript">
+    function stops() {
+
+                    let distance = (document.getElementById("Distance").value)
+
+                    var stp = (distance) / 250;
+                    let output1 = Math.abs(Math.round(stp));
+
+                    document.getElementById("Stops").value = output1;
+
+                    let stops = (document.getElementById("Stops").value)
+                    var cost1 = (stops) * (15 * 2.11)
+                    let output2 = Math.abs(Math.round(cost1));
+
+                    document.getElementById("GasCost").value = output2;
+
+                    var cost2 = (stops) * 20
+                    let output3 = Math.abs(Math.round(cost2));
+
+                    document.getElementById("SnackCost").value = output3;
+
+                }
+
+
+
+
+
+                function budget() {
+
+                    let snack = (document.getElementById("SnackCost").value)
+                    let gas = (document.getElementById("GasCost").value)
+                    let emergency = (document.getElementById("Emergency").value)
+                    var cost = (snack) + (gas) + (emergency)
+                    let output = Math.abs(Math.round(cost));
+
+                    document.getElementById("TripCost").value = output;
+
+                    function save() {
+
+                        let trip = (document.getElementById("TripCost").value)
+                        let save = (document.getElementById("MonthBudget").value)
+
+                        var cost = (trip) / (save)
+                        let output = Math.abs(Math.round(cost));
+
+                        document.getElementById("BudgetMonth").value = output;</script>
         </form>
     </div>
 </div>

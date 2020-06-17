@@ -12,7 +12,7 @@ namespace RoadTrip.Models
     {
         public int Id { get; set; }
 
-        [Display (Name = "Name")]
+        [Display (Name = "Trip Name")]
         public string Name { get; set; }
 
         [Display(Name = "Starting Point")]
@@ -39,7 +39,7 @@ namespace RoadTrip.Models
         [Display(Name = "Estimated Total Cost of Road Trip")]
         public double TripCost { get; set; }
 
-        [Display(Name = "How much to Budget to pay for Road Trip")]
+        [Display(Name = "How much can I Budget Monthly for Trip")]
         public double MonthBudget { get; set; }
 
         [Display(Name = "How many months to pay for Road Trip")]

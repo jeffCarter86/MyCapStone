@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2O+fnAbA1cDjieqVRXXW0tz61N5ksAae58WYPKeL1+tjldWYcC1w+tL8GoQXiaBDRpZpzE+ZiBGcOsmXHz7DmQ==",
+  "dgSpecHash": "hERC4TBNQ9EU98hE8hiFOTqDgN1vHvUol0Qp6aEr+OOzmHkDQznHsibQOK60Md0PdfeWcoPxvZa+GSuAkvzSqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week10\\projects\\MyCapStone\\RoadTrip\\RoadTrip\\RoadTrip.csproj",
+  "projectFilePath": "C:\\Users\\uglym\\Downloads\\MyCapStonemain\\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\\RoadTrip\\RoadTrip.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\uglym\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\uglym\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",
