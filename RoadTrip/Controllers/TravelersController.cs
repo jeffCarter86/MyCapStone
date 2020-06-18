@@ -1,12 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RoadTrip.Data;
 using RoadTrip.Models;
+using System.Collections;
+
 
 namespace RoadTrip.Controllers
 {
@@ -54,6 +59,8 @@ namespace RoadTrip.Controllers
             return View();
         }
 
+        
+
         // POST: Travelers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -70,7 +77,7 @@ namespace RoadTrip.Controllers
             return View(traveler);
         }
 
-        public ActionResult TripGraph()
+        public ActionResult Compare()
 
         {
 

@@ -19,9 +19,9 @@
 
     window.onload = function populateChart() {
 
-        let ctx = document.getElementById('myChart').getContext('2d');
+        var ctx = document.getElementById('myChart').getContext('2d');
 
-        let myChart = new Chart(ctx, {
+        var myChart = new Chart(ctx, {
 
             type: "bar",
 
@@ -33,7 +33,7 @@
 
                     labels: "Cost Comparison of Trips",
 
-                    data: Cost
+                    data: cost
 
                     ,
 
