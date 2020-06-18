@@ -241,6 +241,9 @@ namespace RoadTrip.Migrations
                     b.Property<double>("GasCost")
                         .HasColumnType("float");
 
+                    b.Property<string>("IdentityUserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<double>("MonthBudget")
                         .HasColumnType("float");
 
@@ -260,6 +263,8 @@ namespace RoadTrip.Migrations
                         .HasColumnType("float");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdentityUserId");
 
                     b.ToTable("Travelers");
                 });
@@ -313,6 +318,13 @@ namespace RoadTrip.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("RoadTrip.Models.Traveler", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
+                        .WithMany()
+                        .HasForeignKey("IdentityUserId");
                 });
 #pragma warning restore 612, 618
         }

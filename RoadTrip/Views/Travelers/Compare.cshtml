@@ -4,6 +4,8 @@
     ViewData["Title"] = "Compare";
 }
 
+<h1 align="center">Trip Cost Comparison</h1>
+
 <div class="container">
 
     <canvas id="myChart"></canvas>
@@ -27,11 +29,11 @@
 
             data: {
 
-                labels: [tId],
+                labels: tId,
 
                 datasets: [{
 
-                    labels: "Cost Comparison of Trips",
+                    
 
                     data: cost
 
@@ -79,11 +81,37 @@
 
                 scales: {
 
+                    title: {
+                        display: true,
+                        text: "Trip Cost Comparison in US Dollars"
+                    },
+
                     yAxes: [{
 
                         ticks: {
 
                             beginAtZero: true
+
+                        },
+
+                        scaleLabel: {
+
+                            display: true,
+
+                            labelString: 'Cost (U$)'
+
+                        }
+
+                    }],
+
+                    xAxes: [{
+
+                        
+                        scaleLabel: {
+
+                            display: true,
+
+                            labelString: 'Trip'
 
                         }
 

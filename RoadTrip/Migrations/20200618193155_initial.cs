@@ -47,29 +47,6 @@ namespace RoadTrip.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Travelers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: true),
-                    From = table.Column<string>(nullable: true),
-                    To = table.Column<string>(nullable: true),
-                    Distance = table.Column<double>(nullable: false),
-                    Stops = table.Column<double>(nullable: false),
-                    GasCost = table.Column<double>(nullable: false),
-                    SnackCost = table.Column<double>(nullable: false),
-                    Emergency = table.Column<double>(nullable: false),
-                    TripCost = table.Column<double>(nullable: false),
-                    MonthBudget = table.Column<double>(nullable: false),
-                    BudgetMonth = table.Column<double>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Travelers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -175,6 +152,36 @@ namespace RoadTrip.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Travelers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(nullable: true),
+                    From = table.Column<string>(nullable: true),
+                    To = table.Column<string>(nullable: true),
+                    Distance = table.Column<double>(nullable: false),
+                    Stops = table.Column<double>(nullable: false),
+                    GasCost = table.Column<double>(nullable: false),
+                    SnackCost = table.Column<double>(nullable: false),
+                    Emergency = table.Column<double>(nullable: false),
+                    TripCost = table.Column<double>(nullable: false),
+                    MonthBudget = table.Column<double>(nullable: false),
+                    BudgetMonth = table.Column<double>(nullable: false),
+                    IdentityUserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Travelers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Travelers_AspNetUsers_IdentityUserId",
+                        column: x => x.IdentityUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -213,6 +220,11 @@ namespace RoadTrip.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Travelers_IdentityUserId",
+                table: "Travelers",
+                column: "IdentityUserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
