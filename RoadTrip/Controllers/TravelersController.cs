@@ -70,6 +70,24 @@ namespace RoadTrip.Controllers
             return View(traveler);
         }
 
+        public ActionResult TripGraph()
+
+        {
+
+            var trips = _context.Travelers.Select(t => t).ToList();
+
+            var tripN = trips.Select(i => i.Id).Distinct();
+
+            var cost = trips.Select(c => c.TripCost);
+
+            ViewBag.TripN = tripN;
+
+            ViewBag.Cost = cost;
+
+            return View();
+
+        }
+
         // GET: Travelers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
