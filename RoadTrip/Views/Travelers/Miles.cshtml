@@ -1,0 +1,140 @@
+﻿@model List<RoadTrip.Models.Traveler>
+
+@{
+    ViewData["Title"] = "Miles";
+}
+
+<h1 align="center">Trip Mileage Comparison</h1>
+
+<div class="container">
+
+    <canvas id="myChart"></canvas>
+
+</div>
+
+
+<script>
+
+    var tId = @Html.Raw(Json.Serialize(ViewBag.TripN));
+
+    var mile = @Html.Raw(Json.Serialize(ViewBag.Miles));
+
+    window.onload = function populateChart() {
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        var myChart = new Chart(ctx, {
+
+            type: "bar",
+
+            data: {
+
+                labels: tId,
+
+                datasets: [{
+
+                    
+
+                    data: mile
+
+                    ,
+
+                    backgroundColor: [
+
+                        'rgba(255, 99, 132, 0.2)',
+
+                        'rgba(54, 162, 235, 0.2)',
+
+                        'rgba(255, 206, 86, 0.2)',
+
+                        'rgba(75, 192, 192, 0.2)',
+
+                        'rgba(153, 102, 255, 0.2)',
+
+                        'rgba(255, 159, 64, 0.2)'
+
+                    ],
+
+                    borderColor: [
+
+                        'rgba(255, 99, 132, 1)',
+
+                        'rgba(54, 162, 235, 1)',
+
+                        'rgba(255, 206, 86, 1)',
+
+                        'rgba(75, 192, 192, 1)',
+
+                        'rgba(153, 102, 255, 1)',
+
+                        'rgba(255, 159, 64, 1)'
+
+                    ],
+
+                    borderWidth: 1
+
+                }]
+
+            },
+
+            options: {
+
+                scales: {
+
+                    title: {
+                        display: true,
+                        text: "Trip Cost Comparison in US Dollars"
+                    },
+
+                    yAxes: [{
+
+                        ticks: {
+
+                            beginAtZero: true
+
+                        },
+
+                        scaleLabel: {
+
+                            display: true,
+
+                            labelString: 'Mileage'
+
+                        }
+
+                    }],
+
+                    xAxes: [{
+
+                        
+                        scaleLabel: {
+
+                            display: true,
+
+                            labelString: 'Trip'
+
+                        }
+
+                    }]
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

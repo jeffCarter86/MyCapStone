@@ -83,11 +83,37 @@ namespace RoadTrip.Controllers
 
             var trips = _context.Travelers.Select(t => t).ToList();
 
-            var tripN = trips.Select(i => i.Id).Distinct();
+            var tripN = trips.Select(i => i.Name).Distinct();
 
             var cost = trips.Select(c => c.TripCost);
 
+            var miles = trips.Select(d => d.Distance);
+
             ViewBag.TripN = tripN;
+
+            ViewBag.Miles = miles;
+
+            ViewBag.Cost = cost;
+
+            return View();
+
+        }
+
+        public ActionResult Miles()
+
+        {
+
+            var trips = _context.Travelers.Select(t => t).ToList();
+
+            var tripN = trips.Select(i => i.Name).Distinct();
+
+            var cost = trips.Select(c => c.TripCost);
+
+            var miles = trips.Select(d => d.Distance);
+
+            ViewBag.TripN = tripN;
+
+            ViewBag.Miles = miles;
 
             ViewBag.Cost = cost;
 
