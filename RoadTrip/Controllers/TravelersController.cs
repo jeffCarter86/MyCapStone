@@ -25,13 +25,34 @@ namespace RoadTrip.Controllers
         }
 
         // GET: Travelers
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+
         {
-            return View(await _context.Travelers.ToListAsync());
+
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var traveler = _context.Travelers.Where(c => c.IdentityUserId == userId).FirstOrDefault();
+
+
+            if (traveler == null)
+
+            {
+
+                return View("Create");
+
+            }
+            
+            else
+
+            {
+
+                return View("Index", traveler);
+
+            }
         }
 
-        // GET: Travelers/Details/5
-        public async Task<IActionResult> Details(int? id)
+            // GET: Travelers/Details/5
+            public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {

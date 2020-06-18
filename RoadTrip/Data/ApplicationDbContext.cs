@@ -15,6 +15,20 @@ namespace RoadTrip.Data
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<IdentityRole>()
+                .HasData(
+                new IdentityRole
+                {
+                    Name = "Traveler",
+                    NormalizedName = "Traveler"
+                }
+                );
+        }
+        
         public DbSet<Traveler> Travelers { get; set; }
     }
 }
