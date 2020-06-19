@@ -45,11 +45,7 @@ namespace RoadTrip.Models
         [Display(Name = "How many months to pay for Road Trip")]
         public double BudgetMonth { get; set; }
 
-        [ForeignKey("IdentityUser")]
-
-        public string IdentityUserId { get; set; }
-
-        public IdentityUser IdentityUser { get; set; }
+        
 
 
 

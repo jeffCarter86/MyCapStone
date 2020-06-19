@@ -30,5 +30,6 @@ namespace RoadTrip.Data
         }
         
         public DbSet<Traveler> Travelers { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
     }
 }

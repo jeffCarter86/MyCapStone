@@ -25,30 +25,28 @@ namespace RoadTrip.Controllers
         }
 
         // GET: Travelers
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
 
         {
 
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var traveler = _context.Travelers.Where(c => c.IdentityUserId == userId).FirstOrDefault();
+            var traveler = _context.Profiles.Where(c => c.IdentityUserId == userId).FirstOrDefault();
 
+            
 
             if (traveler == null)
 
             {
 
-                return View("Create");
+                return View(await _context.Travelers.ToListAsync());
 
             }
-            
             else
-
             {
-
-                return View("Index", traveler);
-
+                return View(await _context.Travelers.ToListAsync());
             }
+           
         }
 
             // GET: Travelers/Details/5
@@ -74,6 +72,10 @@ namespace RoadTrip.Controllers
         {
             return View();
         }
+        public IActionResult Profile()
+        {
+            return View();
+        }
 
         public IActionResult Route()
         {
@@ -96,6 +98,18 @@ namespace RoadTrip.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(traveler);
+        }
+
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Profile([Bind("Id,Name,ZipCode")] Profile profile)
+        {
+            if (ModelState.IsValid)
+            { 
+                _context.Add(profile);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(profile);
         }
 
         public ActionResult Compare()
