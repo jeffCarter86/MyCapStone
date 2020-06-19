@@ -336,6 +336,7 @@ C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.csprojAssemblyReference.cache
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.AssemblyInfoInputs.cache
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.AssemblyInfo.cs
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.csproj.CoreCompileInputs.cache
@@ -367,6 +368,7 @@ C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Edit.cshtml.g.cs
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Index.cshtml.g.cs
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Miles.cshtml.g.cs
+C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Profile.cshtml.g.cs
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Route.cshtml.g.cs
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -379,5 +381,3 @@ C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.dll
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.pdb
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.genruntimeconfig.cache
-C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.csprojAssemblyReference.cache
-C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Profile.cshtml.g.cs
