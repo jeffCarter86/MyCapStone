@@ -72,6 +72,15 @@ namespace RoadTrip.Controllers
         {
             return View();
         }
+
+        public IActionResult Sleep()
+        {
+            return View();
+        }
+        public IActionResult Eat()
+        {
+            return View();
+        }
         public IActionResult Profile()
         {
             return View();

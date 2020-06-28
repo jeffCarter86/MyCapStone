@@ -382,3 +382,5 @@ C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.pdb
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\RoadTrip.genruntimeconfig.cache
 C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout2.cshtml.g.cs
+C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Eat.cshtml.g.cs
+C:\Users\uglym\Downloads\MyCapStonemain\MyCapStone-64eee702fa0ef9852a6c82295e97f1020219986f\RoadTrip\obj\Debug\netcoreapp3.1\Razor\Views\Travelers\Sleep.cshtml.g.cs
