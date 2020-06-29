@@ -165,7 +165,7 @@ namespace RoadTrip.Controllers
 
         }
 
-        public ActionResult Miles()
+        public ActionResult Time()
 
         {
 
