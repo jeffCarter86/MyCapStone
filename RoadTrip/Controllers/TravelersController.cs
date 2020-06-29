@@ -165,6 +165,28 @@ namespace RoadTrip.Controllers
 
         }
 
+        public ActionResult Miles()
+
+        {
+
+            var trips = _context.Travelers.Select(t => t).ToList();
+
+            var tripN = trips.Select(i => i.Name).Distinct();
+
+            var cost = trips.Select(c => c.TripCost);
+
+            var miles = trips.Select(d => d.Distance);
+
+            ViewBag.TripN = tripN;
+
+            ViewBag.Miles = miles;
+
+            ViewBag.Cost = cost;
+
+            return View();
+
+        }
+
         // GET: Travelers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
